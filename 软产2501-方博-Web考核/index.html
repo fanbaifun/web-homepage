@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>方博 · 关于我与我的未来</title>
+  <meta name="description" content="JAVA 俱乐部招新考核作品：个人主页与未来规划展示">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#home">跳到主要内容</a>
+
+  <!-- ================= 页头 / 导航 ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <span class="brand-mark" aria-hidden="true">J</span>
+        <span class="brand-text">方博</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="主导航">
+        <a class="nav-link is-active" href="#home">首页</a>
+        <a class="nav-link" href="#about">关于我</a>
+        <a class="nav-link" href="#plan">未来规划</a>
+        <a class="nav-link" href="#club">加入俱乐部</a>
+        <a class="nav-link" href="#contact">联系我</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- 交互 1：深浅色主题切换 -->
+        <button class="icon-btn" id="themeToggle" type="button"
+                aria-label="切换深色 / 浅色主题" title="切换主题">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <g stroke-linecap="round">
+              <path d="M12 2.6v2.6M12 18.8v2.6M2.6 12h2.6M18.8 12h2.6
+                       M5.4 5.4l1.8 1.8M16.8 16.8l1.8 1.8
+                       M18.6 5.4l-1.8 1.8M7.2 16.8l-1.8 1.8"></path>
+            </g>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"></path>
+          </svg>
+        </button>
+
+        <!-- 交互 2：移动端菜单（窄屏显示） -->
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button"
+                aria-label="打开导航菜单" aria-expanded="false" aria-controls="primaryNav">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- 阅读进度条（随滚动增长） -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- ================= 首页 / Hero ================= -->
+    <section class="hero section" id="home">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">JAVA 俱乐部 · 招新考核作品</p>
+          <h1 class="hero-title">
+            你好，我是<span>方博</span>
+          </h1>
+          <p class="hero-tagline">
+            一个喜欢钻研代码和 AI 的大二学生
+          </p>
+          <ul class="chips" aria-label="个人关键词">
+            <li class="chip">积极</li>
+            <li class="chip">有耐心</li>
+            <li class="chip">开朗</li>
+            <li class="chip">有合作精神</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">先了解我</a>
+            <a class="btn btn-ghost" href="#plan">看看我的规划</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- 头像：图片放在 img/avatar.png，换图时只改下面的 src（或直接替换该文件） -->
+          <img class="avatar" src="img/avatar.png" alt="我的头像">
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 关于我 ================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">01</span>
+          <div>
+            <h2>关于我</h2>
+            <p class="section-sub">基本情况、兴趣特点、技能基础与做过的事</p>
+          </div>
+        </header>
+
+        <div class="grid grid-3">
+          <!-- 卡片 1：基本信息 -->
+          <article class="card reveal">
+            <h3 class="card-title">基本信息</h3>
+            <dl class="facts">
+              <div><dt>年级专业</dt><dd>大二 软件工程</dd></div>
+              <div><dt>所在学校</dt><dd>武汉科技大学</dd></div>
+              <div><dt>常用语言</dt><dd>Java / C++</dd></div>
+            </dl>
+          </article>
+
+          <!-- 卡片 2：兴趣与特点 -->
+          <article class="card reveal">
+            <h3 class="card-title">兴趣与特点</h3>
+            <p>
+              喜欢跑步锻炼，喜欢和同学合作，喜欢分享知识
+            </p>
+          </article>
+
+          <!-- 卡片 3：经历或作品 -->
+          <article class="card reveal">
+            <h3 class="card-title">经历 / 作品</h3>
+            <ul class="bullets">
+            
+              <li>正在学习Java基础语法和数据结构，目标学习Java后端+AI</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- 技能条：滚动进入视口时动画增长 -->
+        <article class="card reveal skills-card">
+          <h3 class="card-title">技能基础</h3>
+          <p class="hint">按真实水平填写百分比即可，不需要谦虚到失真。</p>
+          <ul class="skills">
+            <li>
+              <div class="skill-head"><span> Java 基础语法</span><b>80%</b></div>
+              <div class="skill-bar"><i style="--value: 60%"></i></div>
+            </li>
+            <li>
+              <div class="skill-head"><span> HTML / CSS</span><b>50%</b></div>
+              <div class="skill-bar"><i style="--value: 70%"></i></div>
+            </li>
+            <li>
+              <div class="skill-head"><span> C++</span><b>60%</b></div>
+              <div class="skill-bar"><i style="--value: 40%"></i></div>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= 未来规划 ================= -->
+    <section class="section section-alt" id="plan">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">02</span>
+          <div>
+            <h2>未来规划</h2>
+            <p class="section-sub">我在比较的方向、选择原因，以及分阶段的行动计划</p>
+          </div>
+        </header>
+
+        <!-- 交互 3：Tab 切换。把方向名改成你真正在考虑的方向 -->
+        <div class="tabs reveal" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="未来方向对比">
+            <button class="tab-btn is-active" role="tab" id="tab-1"
+                    aria-selected="true" aria-controls="panel-1" tabindex="0">方向一：升学</button>
+            <button class="tab-btn" role="tab" id="tab-2"
+                    aria-selected="false" aria-controls="panel-2" tabindex="-1">方向二：就业</button>
+            <button class="tab-btn" role="tab" id="tab-3"
+                    aria-selected="false" aria-controls="panel-3" tabindex="-1">我的比较与结论</button>
+          </div>
+
+          <div class="tab-panel is-active" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
+            <h3>为什么考虑这个方向</h3>
+            <p>
+              对代码的兴趣和想更上一个平台的想法，让我决定选择升学方向，为以后就业和学习提供基础。
+            </p>
+            <h3>阶段目标</h3>
+            <ul class="bullets">
+              <li>短期目标（本学期）：加强对专业课的学习、证书、合作项目</li>
+              <li>中期目标（1~2 年）：学习 Java 后端 + AI + 深度学习</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2">
+            <h3>为什么考虑这个方向</h3>
+            <p>获得更多工作实习经验，使自己更具有竞争力</p>
+            <h3>阶段目标</h3>
+            <ul class="bullets">
+              <li>短期目标：完成项目，多在公司实习</li>
+              <li>中期目标：在积累工作经验的同时往 AI 方向发展</li>
+            </ul>
+          </div>
+
+          <div class="tab-panel" role="tabpanel" id="panel-3" aria-labelledby="tab-3">
+            <h3>我怎么比较这两个方向</h3>
+            <p>
+              我更倾向升学方向，因为我想在大学里学习更多前沿知识，为以后就业和学习提供基础，更上一个平台
+            </p>
+          </div>
+        </div>
+
+        <!-- 行动计划时间轴：至少 3 项具体准备事项 -->
+        <h3 class="block-title reveal">行动计划</h3>
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-when">本学期</p>
+              <p>每周至少 5 小时敲 Java，期末前刷完 100 道基础题</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-when"> 大二上</p>
+              <p>跟完一个完整的前后端小项目并写进简历</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-when">大二下 ~ 大三</p>
+              <p>参加一次竞赛，或确定实习方向</p>
+            </div>
+          </li>
+          <li class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-when">长期</p>
+              <p>学习 AI + 深度学习</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= 加入俱乐部 ================= -->
+    <section class="section" id="club">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">03</span>
+          <div>
+            <h2>我想在俱乐部学到什么</h2>
+            <p class="section-sub">点击标题可以展开每项学习目标</p>
+          </div>
+        </header>
+
+        <!-- 交互 4：折叠 / 展开（手写手风琴，非 <details>） -->
+        <div class="accordion" id="accordion">
+          <div class="accordion-item is-open">
+            <h3 class="accordion-head">
+              <button class="accordion-btn" type="button" aria-expanded="true" aria-controls="acc-body-1">
+                <span>Java 基础与面向对象</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-body" id="acc-body-1" role="region">
+              <p>独立写出规范的类设计，说清封装/继承/多态在项目里的用处</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-head">
+              <button class="accordion-btn" type="button" aria-expanded="false" aria-controls="acc-body-2">
+                <span>Web 前端与页面交互</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-body" id="acc-body-2" role="region">
+              <p>把 HTML/CSS/JS 的联动机制弄明白，能不看教程写出这个页面的交互</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-head">
+              <button class="accordion-btn" type="button" aria-expanded="false" aria-controls="acc-body-3">
+                <span>后端、数据库与项目协作</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-body" id="acc-body-3" role="region">
+              <p>希望学到能独立写出带数据库的完整后端小项目（含增删改查与登录），并会用 Git 与队友分工协作。</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h3 class="accordion-head">
+              <button class="accordion-btn" type="button" aria-expanded="false" aria-controls="acc-body-4">
+                <span>竞赛、科研或 AI 方向</span>
+                <span class="accordion-icon" aria-hidden="true"></span>
+              </button>
+            </h3>
+            <div class="accordion-body" id="acc-body-4" role="region">
+              <p>至少参与一次校内赛或蓝桥杯，并跟完一个 AI 相关的小课题，把过程和踩坑记录下来。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-2 mt-lg">
+          <article class="card reveal">
+            <h3 class="card-title">希望能参与的事</h3>
+            <ul class="chips chips-wrap">
+              <li class="chip">项目</li>
+              <li class="chip">竞赛</li>
+              <li class="chip">分享会</li>
+              <li class="chip">一起刷题</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3 class="card-title">我期待的成长</h3>
+            <p>
+              一年后希望对 Java 后端 + AI + 深度学习 有更深入的理解，能够独立完成项目，为俱乐部/队友提供技术上的支持。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= 联系我 ================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-index">04</span>
+          <div>
+            <h2>联系我</h2>
+            <p class="section-sub">只放愿意公开的联系方式，不放电话与住址</p>
+          </div>
+        </header>
+
+        <div class="grid grid-2">
+          <article class="card reveal contact-card">
+            <h3 class="card-title">QQ</h3>
+            <p class="contact-value">346802926</p>
+            <button class="btn btn-ghost btn-small" id="copyQQ" type="button">复制 QQ 号</button>
+            <p class="copy-tip" id="copyTip" role="status" aria-live="polite"></p>
+          </article>
+          <article class="card reveal contact-card">
+            <h3 class="card-title">其他</h3>
+            <ul class="bullets">
+              <li>邮箱：346802926@qq.com</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= 页尾 ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> 方博 · JAVA 俱乐部招新考核作品</p>
+      <p class="footer-meta">原生 HTML + CSS + JavaScript 实现 · 无第三方依赖</p>
+    </div>
+  </footer>
+
+  <!-- 交互 5：回到顶部 -->
+  <button class="back-to-top" id="backToTop" type="button" aria-label="回到顶部" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"
+      stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
