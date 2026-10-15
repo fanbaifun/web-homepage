@@ -11,7 +11,7 @@
 | 学校 / 专业 | 武汉科技大学 · 软件工程（大二） |
 | 联系方式 | QQ `346802926` · 邮箱 `346802926@qq.com` |
 | 作品类型 | 原生组（HTML + CSS + JavaScript） |
-| 线上访问地址 | [**【https://github.com/fanbaifun/web-homepage 】**](https://fanbaifun.github.io/web-homepage/) |
+| 线上访问地址 | https://github.com/fanbaifun/web-homepage |
 
 ## 二、使用技术
 
